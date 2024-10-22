@@ -117,7 +117,7 @@ connectButton.onclick = async () => {
   ];  
 
   if (diymodelsel.value.includes("github-assets")) { // github nerdminer releases
-    if(["S3","C3","T-QT","T-Embed","NerminerV2"].some(val => diymodelsel.value.includes(val))){
+    if(["S3","C3","T-QT","T-Embed","NerminerV2","NerdminerV2"].some(val => diymodelsel.value.includes(val))){
       addressesAndFiles = [
         {address: '0x0000', fileName: 'bootloader.bin', progressBar: btprogressBar},
         {address: '0x8000', fileName: 'partitions.bin', progressBar: ptprogressBar},
