@@ -38,6 +38,9 @@
                 background: linear-gradient(to right, #CCCCCC, #CCCCCC); /* Gradient background for the second image */
             }
             .slideshow:nth-child(3) {
+                background-color: #1D111A; /* Background color for the third image */
+            }
+            .slideshow:nth-child(4) {
                 background-color: #2B2727; /* Background color for the third image */
             }
             .content-container {
@@ -47,7 +50,7 @@
                 padding: 20px; /* Padding for some spacing */
             }
             .header-background {
-                background-color: #FFB000;
+                background-color: #212121;
                 width: 100%;
                 display: flex;
                 justify-content: center;
@@ -75,10 +78,10 @@
                 text-decoration: none;
                 font-size: 16px;
                 font-weight: bold;
-                font-family: Fredoka, sans-serif; /* Aplicar fuente Fredoka */
+                font-family: Mulish, sans-serif; /* Aplicar fuente */
             }
             .main-navigation a:hover {
-                color: #000000;
+                color: #5B5B5B;
             }
             .spinner {
                 border: 8px solid rgba(0, 0, 0, 0.1);
@@ -102,7 +105,7 @@
             <header class="site-header">
                 <div class="site-branding">
                     <a href="https://bitronics.store/" rel="home">
-                        <img src="https://bitronics.store/storage/2023/04/bitronics-logo.svg" class="custom-logo" alt="Bitronics">
+                        <img src="https://bitronics.store/storage/2024/09/bitronics-logo.svg" class="custom-logo" alt="Bitronics">
                     </a>
                 </div>
                 <nav id="site-navigation" class="main-navigation" role="navigation">
@@ -115,6 +118,7 @@
         <div class="image-container">
             <img src="media/NerdMiner.png" class="slideshow" alt="NerdMiner Background" />
             <img src="media/NerdAxe.png" class="slideshow" alt="NerdAxe Background" />
+            <img src="media/NerdQaxe.png" class="slideshow" alt="NerdQaxe Background" />
             <img src="media/Bitaxe.png" class="slideshow" alt="Bitaxe Background" />
         </div>
         <div class="container content-container">
@@ -123,7 +127,8 @@
             <div>
                 <label><input type="radio" name="device" value="NerdMiner" checked> NerdMiner</label>
                 <label><input type="radio" name="device" value="NerdMiner-Github"> NerdMiner-Github</label>
-                <label><input type="radio" name="device" value="NerdAxe"> NerdAxe</label>
+                <label><input type="radio" name="device" value="NerdAxe"> Nerdaxe</label>
+                <label><input type="radio" name="device" value="NerdQaxe"> NerdQaxe</label>
                 <label><input type="radio" name="device" value="Bitaxe"> Bitaxe</label>
             </div>
             <p id="deviceInfo">Flashing NerdMiner firmware should be less than 1 minute</p>
@@ -183,6 +188,9 @@
                 const nerdAxeOptions = [
                     { value: "nerdAxe_2.1.5", text: "NerdAxe factory firmware v2.1.5 (TDisplay-S3)" },
                     { value: "nerdAxe_2.1.4", text: "NerdAxe factory firmware v2.1.4 (TDisplay-S3)" }
+                ];
+                const nerdQaxeOptions = [
+                    { value: "NerdQAxe+-v1.0.21", text: "NerdQaxe factory firmware v1.0.21 (TDisplay-S3)" }
                 ];
                 const bitaxeOptions = [
                     { value: "bitaxe_1.0.0", text: "Bitaxe firmware - Under construction" }
@@ -254,9 +262,14 @@
                                 showImage(1);
                                 deviceInfo.innerText = "Flashing NerdAxe firmware can take more than 2 minutes";
                                 break;
+                            case 'NerdQaxe':
+                                updateOptions(nerdQaxeOptions);
+                                showImage(2);
+                                deviceInfo.innerText = "Flashing NerdQaxe firmware can take more than 2 minutes";
+                                break;
                             case 'Bitaxe':
                                 updateOptions(bitaxeOptions);
-                                showImage(2);
+                                showImage(3);
                                 deviceInfo.innerText = "Flashing Bitaxe firmware can take more than 2 minutes";
                                 break;
                         }
