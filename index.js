@@ -97,7 +97,8 @@ connectButton.onclick = async () => {
   firmwareprogressBar.style.display = 'block';
   firmwareprogressBarlbl.style.display = 'block';
 
-  var baudrate = 921600;
+  //var baudrate = 921600;
+  var baudrate = 230400;
 
   try {
         esploader = new ESPLoader(transport, baudrate, null);
