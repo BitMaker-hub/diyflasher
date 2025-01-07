@@ -85,7 +85,7 @@ connectButton.onclick = async () => {
   }
 
   // Check if the selected model is not NerdAxe to display progress bars
-  if ((diymodelsel.value != "nerdAxe_2.1.4")&&(diymodelsel.value != "nerdAxe_2.1.5")&&(diymodelsel.value != "NerdQAxe+-v1.0.21")&&(diymodelsel.value != "NerdQAxe+-v1.0.6")) {
+  if ((diymodelsel.value != "nerdAxe_2.1.4")&&(diymodelsel.value != "nerdAxe_2.1.5")&&(diymodelsel.value != "NerdQAxe+-v1.0.21")&&(diymodelsel.value != "NerdQAxe+-v1.0.22")) {
     btprogressBar.style.display = 'block';
     otaprogressBar.style.display = 'block';
     ptprogressBar.style.display = 'block';
@@ -216,9 +216,9 @@ connectButton.onclick = async () => {
     addressesAndFiles = [
       {address: '0x0000', fileName: 'esp-miner-factory-NerdQAxe+-v1.0.21.bin', progressBar: firmwareprogressBar},
    ]; 
-   } else if (["NerdQAxe+-v1.0.6"].includes(diymodelsel.value)) { // nerdQaxe
+   } else if (["NerdQAxe+-v1.0.22"].includes(diymodelsel.value)) { // nerdQaxe
     addressesAndFiles = [
-      {address: '0x0000', fileName: 'esp-miner-factory-NerdQAxe+-v1.0.6.bin', progressBar: firmwareprogressBar},
+      {address: '0x0000', fileName: 'esp-miner-factory-NerdQAxe+-v1.0.22.bin', progressBar: firmwareprogressBar},
    ]; 
    }
 
