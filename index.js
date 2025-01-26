@@ -85,7 +85,7 @@ connectButton.onclick = async () => {
   }
 
   // Check if the selected model is not NerdAxe to display progress bars
-  if ((diymodelsel.value != "nerdAxe_2.1.4")&&(diymodelsel.value != "nerdAxe_2.1.5")&&(diymodelsel.value != "NerdQAxe+-v1.0.21")&&(diymodelsel.value != "NerdQAxe+-v1.0.22")) {
+  if ((diymodelsel.value != "nerdaxe-v1.0.24")&&(diymodelsel.value != "NerdQAxe+-v1.0.22")&&(diymodelsel.value != "NerdQAxe+-v1.0.24")) {
     btprogressBar.style.display = 'block';
     otaprogressBar.style.display = 'block';
     ptprogressBar.style.display = 'block';
@@ -204,21 +204,17 @@ connectButton.onclick = async () => {
       {address: '0xE000', fileName: '0xe000_boot_app0.bin', progressBar: otaprogressBar},
       {address: '0x10000', fileName: '0x10000_firmware.bin', progressBar: firmwareprogressBar},
    ];
-   } else if (["nerdAxe_2.1.4"].includes(diymodelsel.value)) { // nerdaxe
+   } else if (["nerdaxe-v1.0.24"].includes(diymodelsel.value)) { // nerdaxe
     addressesAndFiles = [
-      {address: '0x0000', fileName: 'esp-miner-factory-nerd101-v2.1.4.bin', progressBar: firmwareprogressBar},
-   ]; 
-   } else if (["nerdAxe_2.1.5"].includes(diymodelsel.value)) { // nerdaxe
-    addressesAndFiles = [
-      {address: '0x0000', fileName: 'esp-miner-factory-nerd101-v2.1.5.bin', progressBar: firmwareprogressBar},
-   ]; 
-   } else if (["NerdQAxe+-v1.0.21"].includes(diymodelsel.value)) { // nerdQaxe
-    addressesAndFiles = [
-      {address: '0x0000', fileName: 'esp-miner-factory-NerdQAxe+-v1.0.21.bin', progressBar: firmwareprogressBar},
+      {address: '0x0000', fileName: 'esp-miner-factory-Nerdaxe-v1.0.24.bin', progressBar: firmwareprogressBar},
    ]; 
    } else if (["NerdQAxe+-v1.0.22"].includes(diymodelsel.value)) { // nerdQaxe
     addressesAndFiles = [
       {address: '0x0000', fileName: 'esp-miner-factory-NerdQAxe+-v1.0.22.bin', progressBar: firmwareprogressBar},
+   ]; 
+   } else if (["NerdQAxe+-v1.0.24"].includes(diymodelsel.value)) { // nerdQaxe
+    addressesAndFiles = [
+      {address: '0x0000', fileName: 'esp-miner-factory-NerdQAxe+-v1.0.24.bin', progressBar: firmwareprogressBar},
    ]; 
    }
 
