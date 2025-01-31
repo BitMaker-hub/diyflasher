@@ -204,7 +204,7 @@ connectButton.onclick = async () => {
       {address: '0xE000', fileName: '0xe000_boot_app0.bin', progressBar: otaprogressBar},
       {address: '0x10000', fileName: '0x10000_firmware.bin', progressBar: firmwareprogressBar},
    ];
-   } else if (["Nerdaxe-v1.0.24"].includes(diymodelsel.value)) { // nerdaxe
+   } else if (["nerdaxe-v1.0.24"].includes(diymodelsel.value)) { // nerdaxe
     addressesAndFiles = [
       {address: '0x0000', fileName: 'esp-miner-factory-Nerdaxe-v1.0.24.bin', progressBar: firmwareprogressBar},
    ]; 
