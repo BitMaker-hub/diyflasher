@@ -85,7 +85,7 @@ connectButton.onclick = async () => {
   }
 
   // Check if the selected model is not NerdAxe to display progress bars
-  if ((diymodelsel.value != "nerdaxe-v1.0.24")&&(diymodelsel.value != "NerdQAxe+-v1.0.22")&&(diymodelsel.value != "NerdQAxe+-v1.0.24")) {
+  if ((diymodelsel.value != "Nerdaxe-v1.0.24")&&(diymodelsel.value != "NerdQAxe+-v1.0.22")&&(diymodelsel.value != "NerdQAxe+-v1.0.24")) {
     btprogressBar.style.display = 'block';
     otaprogressBar.style.display = 'block';
     ptprogressBar.style.display = 'block';
